@@ -1,0 +1,99 @@
+.usbanner{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 70px;
+}
+.usbanner img{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.gsjj{
+	width: 100%;
+	background: #eee;
+	margin: 0px;
+	padding: 0px;
+}
+.gsjj-body{
+	margin: 0 auto; 
+	width:64%;
+	min-height: 100px;
+	padding: 0.8pc 0pc 5px 0pc;
+}
+.aboutus-nav{
+	width: 16.6%;
+	float: left;
+	background: #fff;
+}
+.aboutus-nav ul{
+	list-style-type: none;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+.aboutus-nav ul li{
+	height: 64px;
+	line-height: 64px;
+	border: 1px solid #F1F1F1;
+	border-top: none;
+}
+.aboutus-nav ul li a:hover{
+	text-decoration: underline;
+}
+.aboutus-right{
+	width: 82%;
+	float: right; 
+	background: #fff;
+	min-height: 500px;
+}
+.gsjj-text{
+	width: 90%;
+	margin: 0 auto;
+	padding: 1pc 0pc 0.5pc 0pc;
+}
+.gsjj-text h2{
+	text-align: center;
+}
+.gsjj-text h4{
+	text-align: center;
+}
+.gsjj-text p{
+	text-indent:2em
+}
+.gsjj-text img{
+	width: 100%;
+	margin-bottom: 1pc;
+}
+.gsjj-text video{
+	width: 100%;
+	margin-bottom: 1pc;
+}
+.gsjj-text table{
+	padding: 0px;
+	margin:0px;
+	width: 100%;
+	border: 1px solid #f1f1f1;
+	margin-bottom: 0.7pc;
+}
+.gsjj-text table tr{
+	padding: 0px;
+	margin:0px;
+}
+.gsjj-text table tr td:first-child{
+	padding: 0px;
+	margin:0px;
+	width: 15%;
+}
+.gsjj-text table tr td:last-child{
+	padding: 0px;
+	margin:0px;
+	width: 80%;
+	padding-left: 1pc;
+}
+.gsjj-text table tr td img{
+	margin: 0px;
+}
+.gsjj-text table tr td span{
+	font-size: 20px;
+}
