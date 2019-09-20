@@ -27,6 +27,7 @@ public class UserController {
     public String list(Model model) {
         List<UserEntity> users=userService.getUserList();
         model.addAttribute("users", users);
+        System.out.println(model);
         return "user/list";
     }
 

@@ -10,7 +10,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jargles.entity.UserEntity;
 import com.jargles.mapper.UserMapper;
 import com.jargles.service.UserService;
-import com.jargles.util.JsonUtil;
 
 
 @Service("UserService")

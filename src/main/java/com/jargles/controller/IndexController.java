@@ -1,13 +1,28 @@
 package com.jargles.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.jargles.entity.BannerEntity;
+import com.jargles.entity.NewsEntity;
+import com.jargles.service.BannerService;
+import com.jargles.service.NewsService;
 
 
 @Controller
 //@RequestMapping("/")
 public class IndexController {
+	
+	@Resource
+	NewsService newsService;
+	
+	@Resource
+	BannerService bannerService;
 	
 	@RequestMapping("/")
     public String index() {
@@ -16,7 +31,21 @@ public class IndexController {
 	
 	@RequestMapping("/index")
     public String index(Model model) {
+		List<NewsEntity> news = newsService.getNewsList();
+		List<BannerEntity> banners = bannerService.getBannerList();
+        model.addAttribute("news", news);
+        model.addAttribute("banners", banners);
         return "chiaic/index";
+    }
+	
+	@RequestMapping("/newslist")
+    public String newslist(Model model) {
+		List<NewsEntity> news = newsService.getNewsList();
+		List<BannerEntity> banners = bannerService.getBannerList();
+        model.addAttribute("news", news);
+     //   model.addAttribute("banners", banners);
+        System.out.println(model);
+        return "chiaic/newslist";
     }
 	
 	@RequestMapping("/banner")
