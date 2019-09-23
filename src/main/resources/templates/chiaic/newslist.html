@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>用户列表</title>
+    <title>新闻列表</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
 </head>
 <body class="container">
@@ -12,25 +12,16 @@
 <div class="with:80%">
     <table class="table table-hover">
         <thead >
-        <tr>
-            <th>加号</th>
-            <th>用户名</th>
-            <th>密码</th>
-            <th>真实姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>生日</th>
-            <th>手机号</th>
-            <th>QQ</th>
-            <th><span class="glyphicon glyphicon-pencil"></span></th>
-            <th><span class="glyphicon glyphicon-remove"></span></th>
-        </tr>
+	        <tr>
+	            <th>加号</th>
+	            <th>用户名</th>
+	        </tr>
         </thead>
         <tbody>
-        <tr  th:each="new:${news}">
-            <th scope="row" th:text="${new.newId}">11</th>
-            <td th:text="${new.newTitle}">neo</td>
-        </tr>
+	        <tr th:each="news:${news}">
+	            <th scope="row" th:text="${news.newId}">neo</th>
+            	<td th:text="${news.newTitle}"></td>
+	        </tr>
         </tbody>
     </table>
 </div>
@@ -38,7 +29,7 @@
 <br/>
 <div class="form-group">
     <div class="col-sm-12 control-label text-right">
-        <a href="/toAdd" th:href="@{/user/toAdd}" class="btn btn-info">新增 <span class="glyphicon glyphicon-plus"></span></a>
+        <a href="/index" th:href="@{/index}" class="btn btn-info">新增 <span class="glyphicon glyphicon-plus"></span></a>
     </div>
 </div>
 

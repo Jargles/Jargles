@@ -8,7 +8,7 @@
 	<link rel="icon" th:href="@{chiaic/img/chiaic.ico}" type="image/x-icon">
 </head>
 	<body>
-		<div class="body">
+		<div>
 			<div th:replace="chiaic/head :: header"></div>
 			<!--banner start -->
 			<div  class="banner" style="width: 100%;min-height: 100px;margin-top: 75px;" >
@@ -17,69 +17,30 @@
 			<!-- banner end -->
 			<!--news body start-->
 		<div class="news-tab">
-			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;">
+			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;" th:each="news:${news}">
 				<tr>
-					<td><h2>中心入选全省智能制造观摩优秀企业</h2></td>					
-					<td rowspan="4" style="padding-left: 5pc;"><img src="chiaic/img/news/20190123_01_01.jpg" style="height: 250px ;width: 380px;"></td>
+					<td><h2 th:text="${news.newTitle}">中心入选全省智能制造观摩优秀企业</h2></td>					
+					<td rowspan="4" style="padding-left: 5pc;"><img th:src="${news.picMain}" style="height: 250px ;width: 380px;"></td>
 				</tr>
 				<tr>					
-					<td style="font-size: 14px;color: #4b4b4b;">2019/07/22 &nbsp;&nbsp;&nbsp;&nbsp;来源:国家农机装备创新中心</td>					
+					<td style="font-size: 14px;color: #4b4b4b;"><span th:text="${news.promTime}">2019/07/22</span>&nbsp;&nbsp;&nbsp;&nbsp;来源:国家农机装备创新中心</td>					
 					<td></td>
 				</tr>
 				<tr>					
-					<td>2019年7月20日，刘伟副省长在郑州主持召开“2019年河南省智能制造观摩总结会”，洛阳智能农业装备研究院有限公司暨国家农机装备创新中心应邀参加。</td>
+					<td th:text="${news.newSmBody}">邀参加</td>
 					<td></td>				
 				</tr>
 				<tr>		
-					<td><a href="20190722_01.html"><img src="chiaic/img/common/newsmore.jpg"></a></td>
+					<td><a th:href="@{/newmain(newId=${news.newId})}"><img src="chiaic/img/common/newsmore.jpg"></a></td>
 					<td></td>
 				</tr>
 			</table>
-			
-			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;">
-				<tr>
-					<td><h2>喜讯！“超拖I号”再斩新奖，荣获央企熠星双创大赛三等奖</h2></td>					
-					<td rowspan="4" style="padding-left: 5pc;"><img src="chiaic/img/news/20190409_01_01.jpg" style="height: 250px ;width: 380px;"></td>
-				</tr>
-				<tr>					
-					<td style="font-size: 14px;color: #4b4b4b;">2019/06/17 &nbsp;&nbsp;&nbsp;&nbsp;来源:智能农机创新中心</td>					
-					<td></td>
-				</tr>
-				<tr>					
-					<td>6月14日，由国务院国资委主办的“2018中央企业熠星创新创意大赛”（以下简称“大赛”）总结活动暨颁奖仪式在北京举行，国务委员王勇出席颁奖典礼并作重要讲话，国资委党委书记...</td>
-					<td></td>				
-				</tr>
-				<tr>		
-					<td><a href="20190617_01.html"><img src="chiaic/img/common/newsmore.jpg"></a></td>
-					<td></td>
-				</tr>
-			</table>
-			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;">
-				<tr>
-					<td><h2>中设集团党委书记、董事长张淳一行莅临中心参观指导</h2></td>					
-					<td rowspan="4" style="padding-left: 5pc;"><img src="chiaic/img/news/20190531_01_01.jpg" style="height: 250px ;width: 380px;"></td>
-				</tr>
-				<tr>					
-					<td style="font-size: 14px;color: #4b4b4b;">2019/06/15 &nbsp;&nbsp;&nbsp;&nbsp;来源:智能农机创新中心</td>					
-					<td></td>
-				</tr>
-				<tr>					
-					<td>2019年6月14日，中设集团党委书记、董事长张淳，副总裁张建国，副总裁艾威一行在中国一拖集团有限公司党委书记、董事长黎晓煜的陪同下莅临中心参观指导。...</td>
-					<td></td>				
-				</tr>
-				<tr>		
-					<td><a href="20190615_01.html"><img src="chiaic/img/common/newsmore.jpg"></a></td>
-					<td></td>
-				</tr>
-			</table>
-			
-				
 			<br><br><br><br>
 		</div>
 		<!--news body end-->
-			
-			<div class="foot" th:replace="chiaic/head :: footer"></div>  
-			<div class="copy" th:replace="chiaic/head :: copy" ></div>
 		</div>
+		
+		<div th:replace="chiaic/head :: footer"></div>  
+		<div  th:replace="chiaic/head :: copy" ></div>
 	</body>
 </html>

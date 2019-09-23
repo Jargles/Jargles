@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.jargles.entity.BannerEntity;
 import com.jargles.entity.NewsEntity;
@@ -15,7 +17,7 @@ import com.jargles.service.NewsService;
 
 
 @Controller
-//@RequestMapping("/")
+@RequestMapping("/")
 public class IndexController {
 	
 	@Resource
@@ -41,11 +43,19 @@ public class IndexController {
 	@RequestMapping("/newslist")
     public String newslist(Model model) {
 		List<NewsEntity> news = newsService.getNewsList();
-		List<BannerEntity> banners = bannerService.getBannerList();
+	//	List<BannerEntity> banners = bannerService.getBannerList();
         model.addAttribute("news", news);
      //   model.addAttribute("banners", banners);
         System.out.println(model);
-        return "chiaic/newslist";
+        return "chiaic/news";
+    }
+	
+	@RequestMapping("/newmain")
+    public String newmain(Model model,Integer newId) {
+		NewsEntity news = newsService.getById(newId);
+        model.addAttribute("news", news);
+        System.out.println(model);
+        return "chiaic/newmain";
     }
 	
 	@RequestMapping("/banner")
