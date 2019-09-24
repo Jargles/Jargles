@@ -6,11 +6,7 @@
 	<meta name="keywords" content="洛阳智能农业装备研究院有限公司" />
 	<link rel="stylesheet" type="text/css" th:href="@{chiaic/css/chiaic.css}">
 	<link rel="icon" th:href="@{chiaic/img/chiaic.ico}" type="image/x-icon">
-	<style type="text/css">
-	#newbody>.tr>.td>.h2{
-	text-align: center;
-	}
-	</style>
+	
 </head>
 <body>
 	<div class="body">
@@ -24,55 +20,8 @@
 
 		<!--news body start-->
 		<div class="news-tab" th:each="news:${news}" >
-			<table id="newbody" style="width: 60%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;" th:utext="${news.newBody}">
-			<!-- 
-				<tr>
-					<td><h2 style="">中国工程院院士朵英贤一行莅临创新中心调研</h2></td>					
-				</tr>
-				<tr>					
-					<td style="font-size: 14px;color: #4b4b4b;text-align: center;">2019-01-23 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能农机创新中心</td>					
-				</tr>
-				<tr>					
-					<td style="padding: 0pc 3pc;">
-						<p style="text-align: center; ">
-							<img style="width: 70%;" src="chiaic/img/news/20190123_01_01.jpg" >
-						</p>
-						<br>
-						<p style="text-indent:2em" >
-						为了解中国智能农机发展现状，2019年1月21日，中国工程院院士朵英贤、北京理工大学教授张幽彤一行莅临创新中心调研。创新中心常务副总经理王云飞，中科院计算所高工张玉成博士等领导热情欢迎并全程陪同。
-						</p>
-						<br>
-						<p style="text-align: center; ">
-							<img style="width: 70%;" src="chiaic/img/news/20190123_01_02.jpg" >
-						</p>
-						<br>
-						<p style="text-indent:2em">
-						在创新中心的调研过程中，朵院士重点询问了创新中心技术现状及发展规划，并通过神农一号芯片、超级拖拉机I号等研发成果展示，了解了中心重点研发项目进展。
-						</p>
-						<br>
-						<p style="text-align: center; ">
-							<img style="width: 70%;" src="chiaic/img/news/20190123_01_03.jpg" >
-						</p>
-						<br>
-						<p style="text-indent:2em">
-						1月22日上午，双方领导就构建自主可控的第三代农机创新体系举行座谈会议，市科技局、市工信局、区工信局、区科技局、中国一拖、洛阳中科信息产业研究院等领导列席会议。
-						</p>
-						<br>
-						<p style="text-align: center; "><img style="width: 70%;" src="chiaic/img/news/20190123_01_04.jpg" ></p><br>	
-						<p style="text-indent:2em;">朵英贤，著名的武器设计专家、中国工程院院士、中北大学双聘院士。中国兵器装备集团公司特聘专家，北京理工大学教授、博士生导师。1995年主持设计了95式自动步枪，被誉为“中国95式枪族之父”和“中国枪王”。曾任第二、三、四届中国兵工学会常务理事，第五届荣誉理事；第三、四、五届轻武器专业委员会副主任委员；第一、二、三届国防科技图书基金委员会委员；高等工业学校枪炮专业教学指导委员会委员；担任多个国内外学术期刊编委。1999年当选为中国工程院机械与运载学部院士。</p><br>					
-					</td>	
-				</tr>
-				<tr>
-					<td style="text-align: right;padding: 1pc 6pc;color: #4b4b4b;">责任编辑:&nbsp;程明明</td>
-				</tr>
-				<tr>
-					<td>
-						<hr>
-					</td>
-				</tr>
+			<table style="width: 60%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;" th:utext="${news.newBody}">
 			
-			
-			 -->
 			</table>
 		</div>
 		<!--news body end-->

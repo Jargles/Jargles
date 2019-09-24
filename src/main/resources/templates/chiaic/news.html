@@ -17,23 +17,26 @@
 			<!-- banner end -->
 			<!--news body start-->
 		<div class="news-tab">
-			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;" th:each="news:${news}">
+			<table style="width: 68%;margin: 0 auto;padding: 1pc;margin-top: 8px; background: #F9F9F9;" th:each="news:#{date}">
+					<!--  
 				<tr>
-					<td><h2 th:text="${news.newTitle}">中心入选全省智能制造观摩优秀企业</h2></td>					
-					<td rowspan="4" style="padding-left: 5pc;"><img th:src="${news.picMain}" style="height: 250px ;width: 380px;"></td>
+					<td><h2 th:text="${news.records}">中心入选全省智能制造观摩优秀企业</h2></td>					
+					<td rowspan="4" style="padding-left: 5pc;"><img th:src="${news.addTime}" style="height: 250px ;width: 380px;"></td>
 				</tr>
+			
 				<tr>					
-					<td style="font-size: 14px;color: #4b4b4b;"><span th:text="${news.promTime}">2019/07/22</span>&nbsp;&nbsp;&nbsp;&nbsp;来源:国家农机装备创新中心</td>					
+					<td style="font-size: 14px;color: #4b4b4b;"><span th:text="${news.addTime}">2019/07/22</span>&nbsp;&nbsp;&nbsp;&nbsp;来源:国家农机装备创新中心</td>					
 					<td></td>
 				</tr>
 				<tr>					
-					<td th:text="${news.newSmBody}">邀参加</td>
+					<td th:text="${news.addTime}">邀参加</td>
 					<td></td>				
 				</tr>
 				<tr>		
 					<td><a th:href="@{/newmain(newId=${news.newId})}"><img src="chiaic/img/common/newsmore.jpg"></a></td>
 					<td></td>
 				</tr>
+				-->
 			</table>
 			<br><br><br><br>
 		</div>

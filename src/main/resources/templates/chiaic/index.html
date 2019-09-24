@@ -18,29 +18,15 @@
 		<!-- banner end -->
 
 		<!-- super url start -->
-		<div class="super-url">			
-			<div class="supper-url-body">
-				<div>
+		<div class="super-url" >			
+			<div class="supper-url-body" >
+				<div th:each="banner:${banners}">
 					<a href="http://yg.chiaic.com" target="_blank" >							
 						<p>
-							<img src="chiaic/img/common/url-1-1.png"><br/>智能农业装备管理平台
+							<img th:src="${banner.bannerImg}"><br/><span th:text="${banner.bannerId}">智能农业装备管理平台</span>
 						</p>	
 					</a>	
-				</div>
-				<div>
-					<a href="http://zhny.chiaic.com" target="_blank">							
-						<p>
-							<img src="chiaic/img/common/url-2-1.png"/><br/>智慧农业管理平台
-						</p>	
-					</a>	
-				</div>
-				<div>
-					<a href="http://dtny.chiaic.com" target="_blank">							
-						<p>
-							<img src="chiaic/img/common/url-3-1.png"/><br/>现代农业监管平台
-						</p>	
-					</a>	
-				</div>	
+				</div>				
 			</div>			
 		</div>
 		<!-- super url end -->
@@ -156,72 +142,34 @@
 					<p><u>Comp</u>any News</p>
 				</div>
 			</div>
-			<div class="news-body">
-				<div class="left">	
-					<table>
+			<div class="news-body" >
+				<div class="left" >	
+					<table th:each="news:${news}">
 						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px; "></td>
-							<td class="news-title" ><a href="news/20190722_01.html"><strong>中心入选全省智能制造观摩优秀企业</strong></a></td>							
+							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img th:src="${news.picMain}"  style="width:124px;height: 87px; "></td>
+							<td class="news-title" ><a href="news/20190722_01.html"><strong th:text="${news.newTitle}">中心入选全省智能制造观摩优秀企业</strong></a></td>							
 						</tr>
 						<tr>						
 							<td class="news-body" style="">发布时间:2019.07.22<br/>2019年7月20日，刘伟副省长在郑州主持召开“2019年河南省智能制造观摩总结会”，洛阳智能农业装备研究院有限公司暨国家农机装备创新中心应邀参加。</td>
 						</tr>
 					</table>
-					<table>
-						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px;" ></td>
-							<td class="news-title" ><a href="news/20190702_01.html"><strong>中心赴北京航天智造科技发展有限公司开展合作交流</strong></a></td>							
-						</tr>
-						<tr>						
-							<td class="news-body" style="">发布时间:2019.07.02<br/>2019年6月28日，中心常务副总经理王云飞、总经理助理黄胜操、重大任务办公室主任郭志强一行赴北京航天云网科技发展有限责任公司开展...</td>
-						</tr>
-					</table>					
-					<table>
-						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px;" ></td>
-							<td class="news-title" ><a href="news/20190701_01.html"><strong>中心参加2019《拖拉机与农用运输车》期刊理事年会</strong></a></td>							
-						</tr>
-						<tr>						
-							<td class="news-body" style="">发布时间:2019.07.01<br/>2019年6月27日-29日“2019《拖拉机与农用运输车》期刊理事年会”在河南省洛阳市举办。作为拖拉机行业资深学术...</td>
-						</tr>
-					</table>		
 				</div>
-				<div class="right">
-					<table>
+				<div class="right" >
+					<table th:each="news:${news}">
 						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px; "></td>
-							<td class="news-title" ><a href="news/20190628_01.html"><strong>博士讲堂第五期——基于交通路网大数据的智能交通服务...</strong></a></td>							
+							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img th:src="${news.picMain}"  style="width:124px;height: 87px; "></td>
+							<td class="news-title" ><a href="news/20190722_01.html"><strong th:text="${news.newTitle}">中心入选全省智能制造观摩优秀企业</strong></a></td>							
 						</tr>
 						<tr>						
-							<td class="news-body" style="">发布时间:2019.06.28<br/>2019年6月27日，第五期“博士讲堂”走进河南科技大学，来自电子科技大学自动化学院副教授郭宏亮博士以一场题为...</td>
+							<td class="news-body" style="">发布时间:2019.07.22<br/>2019年7月20日，刘伟副省长在郑州主持召开“2019年河南省智能制造观摩总结会”，洛阳智能农业装备研究院有限公司暨国家农机装备创新中心应邀参加。</td>
 						</tr>
-					</table>	
-					<table>
-						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px;" ></td>
-							<td class="news-title" ><a href="news/20190606_01.html"><strong>国务院发展研究中心副主任王安顺一行莅临中心调研考察</strong></a></td>							
-						</tr>
-						<tr>						
-							<td class="news-body" style="">发布时间:2019.06.06<br/>2019年6月5日，国务院发展研究中心副主任王安顺一行在洛阳市副市长魏险峰，伊滨经开区管委会副书记曹...</td>
-						</tr>
-					</table>					
-					<table>
-						<tr>
-							<td class="news-td1" rowspan="2"  ALIGN="RIGHT"><img src="chiaic/img/news/20190123_01_01.jpg" style="width:124px;height: 87px;" ></td>
-							<td class="news-title" ><a href="news/20190604_01.html"><strong>喜讯！中心斩获2018中国农业机械年度TOP50+技术创新奖第二名</strong></a></td>							
-						</tr>
-						<tr>						
-							<td class="news-body" style="">发布时间:2019.06.04<br/>6月1日获悉，在2018中国农业机械年度TOP50+评选活动中，中心凭借自主研发产品超级拖拉机I号斩获技术创新奖第二名！此次...</td>
-						</tr>
-					</table>		
-						
+					</table>
 				</div>
 			</div>
 			<div class="clear"></div>
 			<div class="more">
 				<a href="news"><h4>查看更多 ></h4></a>
 			</div>	
-			
 		</div>
 		<!-- news end-->
 

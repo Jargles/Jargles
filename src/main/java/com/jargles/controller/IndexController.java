@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.jargles.entity.BannerEntity;
 import com.jargles.entity.NewsEntity;
 import com.jargles.service.BannerService;
@@ -37,15 +39,20 @@ public class IndexController {
 		List<BannerEntity> banners = bannerService.getBannerList();
         model.addAttribute("news", news);
         model.addAttribute("banners", banners);
+        System.out.println(model);
         return "chiaic/index";
     }
 	
-	@RequestMapping("/newslist")
+	@RequestMapping("/news")
     public String newslist(Model model) {
+		JSONObject date = new JSONObject();
 		List<NewsEntity> news = newsService.getNewsList();
-	//	List<BannerEntity> banners = bannerService.getBannerList();
-        model.addAttribute("news", news);
-     //   model.addAttribute("banners", banners);
+		List<BannerEntity> banners = bannerService.getBannerList();
+		IPage page = newsService.getNews();
+      //  model.addAttribute("news", news);
+      //  model.addAttribute("banners", banners);
+        date.put("page", page);
+        model.addAttribute("date", date);
         System.out.println(model);
         return "chiaic/news";
     }
@@ -103,7 +110,7 @@ public class IndexController {
         return "chiaic/jsfu";
     }
 	
-	@RequestMapping("/news")
+	@RequestMapping("/newslist")
     public String news(Model model) {
         return "chiaic/news";
     }
